@@ -1,4 +1,4 @@
-package com.dongz.learn.netty.NIO;
+package com.dongz.learn.netty3.NIO;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

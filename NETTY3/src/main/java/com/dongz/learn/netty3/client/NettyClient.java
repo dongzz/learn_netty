@@ -1,6 +1,6 @@
-package com.dongz.learn.netty.client;
+package com.dongz.learn.netty3.client;
 
-import com.dongz.learn.netty.client.handler.HiHandler;
+import com.dongz.learn.netty3.client.handler.HiHandler;
 import org.jboss.netty.bootstrap.ClientBootstrap;
 import org.jboss.netty.channel.Channel;
 import org.jboss.netty.channel.ChannelFuture;

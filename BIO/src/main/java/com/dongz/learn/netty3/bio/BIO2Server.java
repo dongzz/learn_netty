@@ -1,19 +1,23 @@
-package com.dongz.learn.netty.bio;
+package com.dongz.learn.netty3.bio;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
- * @Description bio
+ * @Description bio 加线程池
  * @Auther dz <895180729@qq.com>
  * @Version V1.0.0
  * @Since 1.8
  * @Date 2020/7/19 20:33
  */
-public class BIOServer {
+public class BIO2Server {
     public static void main(String[] args) throws IOException {
+        // 创建线程
+        ExecutorService executorService = Executors.newCachedThreadPool();
         // 创建socket服务，监听 8080 端口
         ServerSocket server = new ServerSocket(8080);
         System.out.println("服务启动了！");
@@ -22,7 +26,9 @@ public class BIOServer {
             final Socket socket = server.accept();
             System.out.println("来了一个新客户端！");
             // 业务处理
-            handler(socket);
+            executorService.execute(() -> {
+                handler(socket);
+            });
         }
     }
 

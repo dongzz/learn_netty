@@ -1,4 +1,4 @@
-package com.dongz.learn.netty.server.handler;
+package com.dongz.learn.netty3.server.handler;
 
 import org.jboss.netty.channel.*;
 

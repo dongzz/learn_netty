@@ -36,7 +36,16 @@
        selector.select(100); 不阻塞， （100ms后返回）
        selector.wakeup(); 也可以唤醒selector
     ```
-    
+
+## 我们如何提高NIO的工作效率
+### 一个NIO是不是只有一个selector？
+    不是，一个系统可以有多个selector    
+### selector是不是只能注册一个ServerSocketChannel
+    不是，可以注册多个
+
+
+
+
 # Netty
     SimpleChannelHandler        处理消息接收和写
     {
