@@ -37,3 +37,10 @@
        selector.wakeup(); 也可以唤醒selector
     ```
     
+# Netty
+    SimpleChannelHandler        处理消息接收和写
+    {
+        messageReceived 接收消息
+        channelConnected 新连接，通常用来检测IP是否是黑名单
+        channelDisconnected 连接关闭，可以在用户断线的时候清除用户的缓存数据等
+    }
