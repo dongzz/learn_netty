@@ -1,7 +1,5 @@
-package com.dongz.learn.netty.handler;
+package com.dongz.learn.netty.client.handler;
 
-import org.jboss.netty.buffer.ChannelBuffer;
-import org.jboss.netty.buffer.ChannelBuffers;
 import org.jboss.netty.channel.*;
 
 /**
@@ -9,12 +7,12 @@ import org.jboss.netty.channel.*;
  * @Auther dz <895180729@qq.com>
  * @Version V1.0.0
  * @Since 1.8
- * @Date 2020/7/20 11:15
+ * @Date 2020/7/20 13:49
  */
-public class HelloHandler extends SimpleChannelHandler {
+public class HiHandler extends SimpleChannelHandler {
     /**
-      * 接收消息
-      */
+     * 接收消息
+     */
     @Override
     public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
         System.out.println("messageReceived");
@@ -22,10 +20,6 @@ public class HelloHandler extends SimpleChannelHandler {
 //        System.out.println(new String(message.array()));
         System.out.println(e.getMessage());
 
-        // 回写数据
-//        ChannelBuffer cf = ChannelBuffers.copiedBuffer("hi".getBytes());
-//        ctx.getChannel().write(cf);
-        ctx.getChannel().write("hi");
         super.messageReceived(ctx, e);
     }
 

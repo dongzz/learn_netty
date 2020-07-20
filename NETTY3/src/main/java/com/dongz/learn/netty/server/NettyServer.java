@@ -1,7 +1,7 @@
-package com.dongz.learn.netty;
+package com.dongz.learn.netty.server;
 
 
-import com.dongz.learn.netty.handler.HelloHandler;
+import com.dongz.learn.netty.server.handler.HelloHandler;
 import org.jboss.netty.bootstrap.ServerBootstrap;
 import org.jboss.netty.channel.ChannelPipeline;
 import org.jboss.netty.channel.Channels;
