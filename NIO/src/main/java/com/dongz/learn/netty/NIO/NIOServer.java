@@ -16,7 +16,7 @@ import java.util.Iterator;
  * @Since 1.8
  * @Date 2020/7/19 20:45
  */
-public class TestServer {
+public class NIOServer {
     // 通道管理器
     private Selector selector;
 
@@ -24,7 +24,7 @@ public class TestServer {
      * 启动服务端测试
      */ 
     public static void main(String[] args) throws IOException {
-        TestServer testServer = new TestServer();
+        NIOServer testServer = new NIOServer();
         testServer.initServer(8080);
         testServer.listen();
     }
